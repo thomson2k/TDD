@@ -30,3 +30,11 @@ test('changes to yellow as fourth', t =>{
 
 	t.is(light, 'yellow')
 })
+
+test('changes to red as fifth', t =>{
+	signal.change()
+
+	const light = signal.getCurrent()
+
+	t.is(light, 'red')
+})
