@@ -9,7 +9,16 @@ test('starts with red light', t =>{
 
 test('changes to yellow as second', t =>{
 	signal.change()
+
 	const light = signal.getCurrent()
 
 	t.is(light, 'yellow')
+})
+
+test('changes to green as third', t =>{
+	signal.change()
+
+	const light = signal.getCurrent()
+
+	t.is(light, 'green')
 })
