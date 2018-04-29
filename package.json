@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "test:watch": "watch \"npm test\" src test"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "ava": "^0.25.0"
+    "ava": "^0.25.0",
+    "watch": "^1.0.2"
   }
 }
