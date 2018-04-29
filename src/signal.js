@@ -1,26 +1,23 @@
-module.exports = () => {
-	let current = 'red'
-	let goingToGreen = true
+const colors = [
+	'red',
+	'yellow',
+	'green',
+	'yellow',
+]
 
+module.exports = () => {
+	let current = 0 
 return {
 	change: () => {
-		if (current === 'red') {
-			current = 'yellow'
-		} else if(current === 'yellow') {
-			if(goingToGreen){
-			current = 'green'
-			goingToGreen = false
-			} else {
-				current = 'red'
-			goingToGreen = true
-			}
-		} else if(current === 'green') {
-			current = 'yellow'
+		current++
+
+		if(current == 4) {
+			current = 0
 		}
 	},
 
-	getCurrent: () => {
-		return current
+	getCurrent: () => {	
+		return colors[current]
 	},
-}
+  }
 }
